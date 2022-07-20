@@ -245,6 +245,7 @@ const convertirAMin = (minutos) => {
 	document.write (`resultado: ${horas} hs y ${valorMinutos} min`);
 	}
 }
+<<<<<<< HEAD:archivo-prueba.js
 
 
 // Hacer un programa que solicite el ingreso de un número y que luego emita un
@@ -446,3 +447,5 @@ if ((a + b) > (b * c)){
 	alert ("la suma del 1er y 2do numero es mayor a la multiplicacion del 2do con el 3ro")
 }
 }
+=======
+>>>>>>> 7d6a8a9f4bb0fc872abe0543d4c22d7bde81a17a:easy-lvl.js
