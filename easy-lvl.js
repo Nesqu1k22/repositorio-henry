@@ -449,3 +449,205 @@ if ((a + b) > (b * c)){
 }
 =======
 >>>>>>> 7d6a8a9f4bb0fc872abe0543d4c22d7bde81a17a:easy-lvl.js
+
+// Hacer un programa que solicite el ingreso de 10 números y que muestre el
+//  mayor de ellos por pantalla.Solo se debe emitir UN valor por pantalla.
+
+ const mayorDe10 = (a,b,c,d,e,f,g,h,i,j) =>{
+ 	let numeros = [a,b,c,d,e,f,g,h,i,j];
+ 	var a = 0;
+ 	for (i = 0; numeros.length > i; i++){
+ 		if (numeros [i] > a) {
+ 			a = numeros [i];
+ 		}
+ 	}
+ 	alert (`el numero mayor es ${a}`);
+ }
+
+
+// Hacer un programa que solicite 20 números y calcule y emita por pantalla
+//  cuántos son positivos (mayores a cero). Se debe mostrar un solo valor: el
+//  conteo final.
+
+const losPositivos = (a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t) => {
+	var numeros = [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t];
+	var positivos = 0;
+	for (i = 0; numeros.length > i; i++) {
+		if (numeros [i] > 0) {
+			positivos += 1;
+		}
+	}
+	alert (`hay un total de ${positivos} positivos`)
+}
+
+// Hacer un programa para mostrar los números del 1 al 10. No se debe realizar
+//  ningún pedido de datos.
+
+const del1Al10 = () => {
+	var numeros = [1,2,3,4,5,6,7,8,9,10];
+	alert (`${numeros}`);
+}
+
+// Hacer un programa para mostrar los números del 10 al 1. No se debe realizar
+//  ningún pedido de datos.
+
+const del1Al10 = () => {
+	var numeros = [10,9,8,7,6,5,4,3,2,1];
+	alert (`${numeros}`);
+}
+
+// Hacer un programa que muestre los números del 1 al 100 de 5 en 5. Ejemplo:
+//  0,5,10,15,20 .... 100.
+
+const de5Al100 = () => {
+	var a = -5;
+	while (100 > a){
+		a += 5;
+		alert (`${a}`);
+	}
+}
+
+// Hacer un programa que solicite UN número y luego calcule y emita un cartel
+//  aclaratorio si el mismo es primo o no es primo.
+//  Nota:un numero es primo cuando es divisible únicamente por 1 y por sí
+//  mismo.
+
+const Esprimo = (numero) => { 
+var primo = true
+
+	if ( numero === 2 || numero === 3 || numero === 5 || numero === 7) {
+		return primo;
+	}
+
+	else {
+
+		for (i = 2; i <= 10; i++){
+	    		 
+	     	if ( numero === 1 || numero === 0 || (numero % i) === 0){
+	     		 	var primo = false;
+	     	}
+	    }
+	    
+	    return primo;
+	}
+}
+
+// Hacer un programa que solicite 10 números y luego mostrar por pantalla el
+//  máximo de ellos y la posición en la que fue ingresado.
+
+const encontrarMayor = () => {
+	var n = prompt ("ingrese el 1er numero")
+	var p = 0;
+	for (i = 2; i < 11; i++) {
+		var x = prompt (`ingrese el ${i} valor`);
+		if ( n < x){
+			var n = x;
+			var p = i;
+		}
+	}
+	alert (`el mayor de los 10 es el numero ${n} en la posicion Nº ${p}`);
+}
+
+
+// Hacer un programa que solicite 20 números y luego mostrar por pantalla el
+//  menor de ellos y la posición en la que fue encontrado.
+
+const encontrarMenor = () => {
+	var n = prompt ("ingrese el 1er numero");
+	var p = 0;
+	for (i = 2; i < 21; i++) {
+		var x = prompt (`ingrese el ${i} valor`);
+		if (n > x){
+			var n = x;
+			var p = i;
+		}
+	}
+	alert (`el menor de los 20 es el numero ${n} en la posicion Nº ${p}`);
+}
+
+
+// Hacer un programa que solicite 20 edades y luego calcule el promedio de edad
+//  de aquellas personas mayores a 18 años.
+
+const promedioDeEdad = () =>{
+	var mayores = 0;
+	var a = 0;
+	let p = mayores / a;
+	for (i = 0; i < 20; i++) {
+		e = prompt ("igrese la edad");
+		if (e > 18) {
+			mayores += e;
+			a ++; 
+		}
+	}
+	alert (`el numero promedio de edades correspondientes a los mayores de 18 años es de ${p} `)
+}
+
+// Hacer un programa que solicite 20 números y luego emitir por pantalla el
+//  máximo de los números pares y el mínimo de los números impares.
+
+
+
+// Hacer un programa para ingresar 10 números y luego calcule y emita el mayor
+//  de los primos de la lista. En caso de no haber ningún número primo, deberá
+//  aclararlo con un cartel.
+
+
+
+// Hacer un programa para mostrar los números del1al 10. No se debe realizar
+// ningún pedido de datos.USANDO WHILE.
+
+
+
+// Hacer un programa para mostrar los números del 10 al 1. No se debe realizar
+// ningún pedido de datos.USANDO WHILE.
+
+
+
+// Hacer un programa que solicite la edad de un grupo de personas.El programa
+// deberá pedir edades hasta que se ingrese una edad menora18 años.Deberá
+// mostrar por pantalla cuántas personas mayores se registraron.
+
+
+
+// Hacer un programa que solicite dos númerosyluego muestre los números
+// entre el menoryel mayor de ellos.Acordate,usando While.
+
+
+
+// Hacer un programa que muestre los números del1al 100 de5en 5. Ejemplo:
+// 0,5,10,15,20 .... 100. Usando While.
+
+
+
+// Hacer un programa que solicite UN númeroyluego calculeyemita un cartel
+// aclaratorio si el mismo es primoono es primo.
+// Nota:usando While.Ya lo hicimos con FOR,ahora con While.
+
+
+
+// Hacer un programa que solicite una lista de números que corta cuando se
+// ingresa un ceroyluego mostrar por pantalla el máximo de ellosyla posición
+// en la que fue ingresado.
+
+
+
+// Hacer un programa que solicite una lista de números que corta cuando se
+// ingresa un ceroyluego mostrar por pantalla el menoryel segundo menor.
+
+
+
+// Realizar el nuevamente el ejercicio8pero ahora debe devolver además la
+// posición en la que fue encontrado cada uno de los mínimos.
+
+
+
+// Hacer un programa que solicite una lista de números que corta cuando se
+// ingresa un ceroyluego emitir por pantalla el máximo de los números
+// negativosyel mínimo de los números positivos.
+
+
+
+// Hacer un programa para ingresar una lista de números que corta cuando se
+// ingresa un ceroyluego mostrar:la cantidad de números primos,la cantidad de
+// números pares,la cantidad de positivosyla cantidad de negativos.
