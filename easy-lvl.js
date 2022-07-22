@@ -491,7 +491,7 @@ const del1Al10 = () => {
 // Hacer un programa para mostrar los números del 10 al 1. No se debe realizar
 //  ningún pedido de datos.
 
-const del1Al10 = () => {
+const del10Al1 = () => {
 	var numeros = [10,9,8,7,6,5,4,3,2,1];
 	alert (`${numeros}`);
 }
@@ -521,7 +521,7 @@ var primo = true
 
 	else {
 
-		for (i = 2; i <= 10; i++){
+		for (let i = 2; i <= 10; i++){
 	    		 
 	     	if ( numero === 1 || numero === 0 || (numero % i) === 0){
 	     		 	var primo = false;
@@ -569,35 +569,73 @@ const encontrarMenor = () => {
 // Hacer un programa que solicite 20 edades y luego calcule el promedio de edad
 //  de aquellas personas mayores a 18 años.
 
-const promedioDeEdad = () =>{
-	var mayores = 0;
+const promedioDeEdad = () => {
+	mayores = 0;
 	var a = 0;
-	let p = mayores / a;
+	
 	for (i = 0; i < 20; i++) {
-		e = prompt ("igrese la edad");
-		if (e > 18) {
-			mayores += e;
-			a ++; 
+		let edad = parseInt(prompt ("ingrese la edad"));
+		if (18 < edad) {
+			mayores = edad + mayores;
+			a++; 
 		}
 	}
-	alert (`el numero promedio de edades correspondientes a los mayores de 18 años es de ${p} `)
+	let p = mayores / a;
+	alert (`el numero promedio de edades correspondientes a los mayores de 18 años es de ${p}`)
 }
 
 // Hacer un programa que solicite 20 números y luego emitir por pantalla el
 //  máximo de los números pares y el mínimo de los números impares.
 
+const maxParMinImp = () => {
+	var a = false;
+	var b = false;
+	for (i = 0; i < 20; i++){
+		let num = parseInt(prompt ("ingrese el numero"));
+		if (num % 2 === 0 && num > a) {
+			a = num;
+		}
+		if (num % 2 !== 0 && num < b) {
+			b = num;
+		}
 
+	}
+	alert (`el maximo de los pares es ${a} y el minimo de los impares es ${b}`)
+}
 
 // Hacer un programa para ingresar 10 números y luego calcule y emita el mayor
 //  de los primos de la lista. En caso de no haber ningún número primo, deberá
 //  aclararlo con un cartel.
 
+const primoMayor = () => { 
+	var a = false;
+	for (i = 0; i < 10; i++){
+		var num = parseInt(prompt ("ingrese el numero"));
+		var b = Esprimo (num);
+		if (b === true && num > a){
+			a = num;
+		}
+	}
+	if (a !== false) {
+				alert (`el mayor numero primo es ${a}`);
+			}
+			else {
+				alert ("no hay numeros primos")
+			}
+}
 
-
-// Hacer un programa para mostrar los números del1al 10. No se debe realizar
+// Hacer un programa para mostrar los números del 1 al 10. No se debe realizar
 // ningún pedido de datos.USANDO WHILE.
 
-
+const de1A10 = () =>{
+	var numeros = [];
+	let i = 0;
+	while (i < 10) {
+		numeros [i] = i + 1; 
+		i++;
+	}
+	alert (`${numeros}`);
+}
 
 // Hacer un programa para mostrar los números del 10 al 1. No se debe realizar
 // ningún pedido de datos.USANDO WHILE.
