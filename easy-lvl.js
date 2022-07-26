@@ -646,46 +646,177 @@ const de1A10 = () =>{
 // deberá pedir edades hasta que se ingrese una edad menora18 años.Deberá
 // mostrar por pantalla cuántas personas mayores se registraron.
 
+const de10A1 = () =>{
+	var numeros = [];
+	let i = 0;
+	while (i < 10) {
+		numeros [i] = 10 - i; 
+		i++;
+	}
+	alert (`${numeros}`);
+}
+
+// Hacer un programa que solicite dos números y luego muestre los números
+// entre el menor y el mayor de ellos.Acordate,usando While.
+
+const entre2 = () =>{
+	 numeros = [];
+	let e = 0;
+	let a = parseInt(prompt("ingrese el 1er numero"));
+	let b = parseInt(prompt("ingrese el 2do numero"));
+	while ((a - 1) > b) {
+		b++
+		numeros[e] = b;
+		e++;
+	}	
+	while ((b - 1) > a) {
+		a++
+		numeros[e] = a;
+		e++;
+	}	
+	alert (`${numeros}`)
+}
 
 
-// Hacer un programa que solicite dos númerosyluego muestre los números
-// entre el menoryel mayor de ellos.Acordate,usando While.
-
-
-
-// Hacer un programa que muestre los números del1al 100 de5en 5. Ejemplo:
+// Hacer un programa que muestre los números del 1 al 100 de 5 en 5. Ejemplo:
 // 0,5,10,15,20 .... 100. Usando While.
 
+const mas5 = () => {
+	let a = 101;
+	var b = 0;
+	let c = 0;
+	numeros = [];
+	while (a > b) {
+		numeros[c] = b;
+		b += 5;
+		c++;
+	}
+	alert (`${numeros}`)
+}  
 
-
-// Hacer un programa que solicite UN númeroyluego calculeyemita un cartel
-// aclaratorio si el mismo es primoono es primo.
+// Hacer un programa que solicite UN número y luego calcule y emita un cartel
+// aclaratorio si el mismo es primo o no es primo.
 // Nota:usando While.Ya lo hicimos con FOR,ahora con While.
 
-
+const esPrimoWhile = () => {
+	let a = 0;
+	let i = 2;
+	const num = parseInt(prompt("ingrese el valor"));
+	
+	if (num === 0 || num === 1){
+		alert ("El numero no es primo");
+	}
+	else {
+		while (i < num){
+			if (num % i === 0){
+				a = a + 1;
+				i = i + 1;
+			}
+			else {
+				i++;
+			}
+		}
+	if (a > 0) {
+			alert ("El numero no es primo");
+	}
+	else {
+			alert ("el numero es primo");
+	}
+	}
+}
 
 // Hacer un programa que solicite una lista de números que corta cuando se
-// ingresa un ceroyluego mostrar por pantalla el máximo de ellosyla posición
+// ingresa un cero y luego mostrar por pantalla el máximo de ellos y la posición
 // en la que fue ingresado.
 
+const maxHasta0 = () => {
 
+let contador = 0;
+var max = 0;
+var pos = 0;
+do {
+	var numero = parseInt(prompt ("ingrese un numero"));
+	
+	if (numero > max){
+		max = numero;
+		pos = contador;
+		contador++;
+	}
+	else {
+		contador++;
+	}
+}
+while (numero !== 0)
+alert (`el numero con el maximo valor es ${max} y fue ingresado en la posicion Nº ${pos}`);
+}
 
 // Hacer un programa que solicite una lista de números que corta cuando se
-// ingresa un ceroyluego mostrar por pantalla el menoryel segundo menor.
+// ingresa un cero y luego mostrar por pantalla el menor y el segundo menor.
 
+const minimosHasta0 = () => {
 
+var min = null;
+var min2 = null;
+while (numero !== 0) {
+	var numero = parseInt(prompt ("ingrese un numero"));
+	if (numero < min && numero < min2){
+		min2 = min;
+		min = numero;
+	}
+	else if (numero < min2) {
+		min2 = numero;
+	}
+}
+alert (`los numeros con el minimo valor son ${min} y el que le sigue ${min2}`);
+}
 
-// Realizar el nuevamente el ejercicio8pero ahora debe devolver además la
+// Realizar el nuevamente el ejercicio 8 pero ahora debe devolver además la
 // posición en la que fue encontrado cada uno de los mínimos.
 
+const minimosPosHasta0 = () => {
 
+let contador = 1;
+var pos1 = 0;
+var pos2 = 0;
+var min = null;
+var min2 = null;
+while (numero !== 0) {
+	var numero = parseInt(prompt ("ingrese un numero"));
+	if (numero < min && numero < min2){
+		min2 = min;
+		min = numero;
+		pos1 = contador;
+	}
+	else if (numero < min2) {
+		min2 = numero;
+		pos2 = contador;
+	}
+	contador++;
+}
+alert (`los numeros con el minimo valor son ${min} ingresado en la posicion ${pos1} y el que le sigue ${min2} encontrado en la posicion ${pos2}`);
+}
 
 // Hacer un programa que solicite una lista de números que corta cuando se
-// ingresa un ceroyluego emitir por pantalla el máximo de los números
-// negativosyel mínimo de los números positivos.
+// ingresa un cero y luego emitir por pantalla el máximo de los números
+// negativos y el mínimo de los números positivos.
 
+const minimosYMaxHasta0 = () => {
+
+var minPos = null;
+var maxNeg = null;
+while (numero !== 0) {
+	var numero = parseInt(prompt ("ingrese un numero"));
+	if (numero < minPos && numero > 0){
+		minPos = numero;
+	}
+	else if (numero > maxNeg && numero < 0) {
+		maxNeg = numero;
+ 	}
+}
+alert (`el numero con el minimo valor positivos es ${minPos}  y el numero con el maximo valor negativo es ${minNeg}`);
+}
 
 
 // Hacer un programa para ingresar una lista de números que corta cuando se
-// ingresa un ceroyluego mostrar:la cantidad de números primos,la cantidad de
-// números pares,la cantidad de positivosyla cantidad de negativos.
+// ingresa un cero y luego mostrar: la cantidad de números primos, la cantidad de
+// números pares, la cantidad de positivos y la cantidad de negativos.
